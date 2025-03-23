@@ -1,0 +1,58 @@
+/* src/components/NavBarProject.css */
+.sidebar {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 250px;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  height: 100vh; 
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-border);
+}
+
+.sidebar-header h2 {
+  color: #3a86ff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sidebar-nav ul {
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav li.active .nav-button {
+  background-color: var(--secondary-color);
+  color: #3a86ff;
+  font-weight: 500;
+  transform: translateX(2px); /* Effet moins marqué */
+  border: 2px solid var(--secondary-border);
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: var(--transition);
+}

@@ -1,0 +1,299 @@
+/* Structure de la page projet - Nouveau layout */
+.project-page-container {
+  max-width: 1400px;
+  padding: 5rem 0 0 0;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  color: var(--text-color);
+}
+
+.project-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Style du contenu principal */
+.project-content-container {
+  flex: 1;
+}
+
+/* Carte de projet avec ombre et animation au survol */
+.project-card-description {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  margin: 1rem;
+  padding: 3rem;
+}
+
+.project-card-description:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+/* En-tête du projet avec une bordure de couleur */
+.project-header {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--secondary-border);
+}
+
+.project-header:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  border-radius: 3px;
+}
+
+/* Style du titre amélioré */
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
+}
+
+/* Section des tags avec un style plus moderne */
+.tags-section {
+  margin-bottom: 2rem;
+}
+
+.tags-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Style des tags individuels amélioré */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50px; /* Forme pillule */
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tag-lg {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Couleurs spécifiques pour chaque tag */
+.tag-javascript {
+  background-color: #f7df1e;
+  color: #323330;
+}
+
+.tag-html {
+  background-color: #e34f26;
+  color: #fff;
+}
+
+.tag-css {
+  background-color: #1572b6;
+  color: #fff;
+}
+
+.tag-php {
+  background-color: #777bb4;
+  color: #fff;
+}
+
+.tag-github {
+  background-color: #333;
+  color: #fff;
+}
+
+.tag-python {
+  background-color: #3776ab;
+  color: #fff;
+}
+
+.tag-java {
+  background-color: #007396;
+  color: #fff;
+}
+
+.tag-javafx {
+  background-color: #5382a1;
+  color: #fff;
+}
+
+.tag-word {
+  background-color: #2b579a;
+  color: #fff;
+}
+
+.tag-event {
+  background-color: #ff9914;
+  color: #fff;
+}
+
+.tag-fishing {
+  background-color: #4ea5d9;
+  color: #fff;
+}
+
+/* Section de description améliorée */
+.project-description {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.project-description p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.project-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Pagination et navigation améliorées */
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--secondary-border);
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: white;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  max-width: 300px;
+}
+
+.nav-button:hover {
+  background-color: var(--btn-hover-bg);
+  transform: translateY(-2px);
+}
+
+.nav-prev {
+  margin-right: auto;
+}
+
+.nav-next {
+  margin-left: auto;
+}
+
+/* Animation pour les paragraphes au chargement */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-description p {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.project-description p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.project-description p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.project-description p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.project-description p:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.project-description p:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .project-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-page-container {
+    padding: 1rem;
+  }
+
+  .project-card-description {
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .nav-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card-description {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.75rem;
+  }
+
+  .tags-container {
+    gap: 0.5rem;
+  }
+
+  .tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .nav-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,294 @@
+/* Layout principal - nouvelle structure */
+.all-projects-container {
+  max-width: 1400px;
+  padding: 5rem 0 0 0;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+}
+
+.all-projects-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Style de la sidebar */
+.sidebar-container {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Style du contenu principal */
+.projects-main {
+  flex: 1;
+}
+
+.projects-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-border);
+  position: relative;
+}
+
+.projects-header:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  border-radius: 3px;
+}
+
+.projects-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.projects-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Grille de projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Style de carte de projet */
+.project-item {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-item h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Tags des projets */
+.project-meta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Couleurs spécifiques pour chaque tag */
+.tag-javascript {
+  background-color: #f7df1e;
+  color: #323330;
+}
+
+.tag-html {
+  background-color: #e34f26;
+  color: white;
+}
+
+.tag-css {
+  background-color: #1572b6;
+  color: white;
+}
+
+.tag-php {
+  background-color: #777bb4;
+  color: white;
+}
+
+.tag-github {
+  background-color: #333;
+  color: white;
+}
+
+.tag-python {
+  background-color: #3776ab;
+  color: white;
+}
+
+.tag-java {
+  background-color: #007396;
+  color: white;
+}
+
+.tag-javafx {
+  background-color: #5382a1;
+  color: white;
+}
+
+.tag-word {
+  background-color: #2b579a;
+  color: white;
+}
+
+.tag-event {
+  background-color: #ff9914;
+  color: white;
+}
+
+.tag-fishing {
+  background-color: #4ea5d9;
+  color: white;
+}
+
+.project-badge {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  background-color: #8338ec;
+  color: white;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Bouton de lien */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: white;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  margin-top: auto;
+  text-align: center;
+}
+
+.project-link:hover {
+  background-color: var(--btn-hover-bg);
+  transform: translateY(-2px);
+}
+
+/* Message quand aucun projet n'est trouvé */
+.no-projects {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.no-projects p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Animation pour les cartes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .all-projects-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  .all-projects-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

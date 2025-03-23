@@ -1,0 +1,236 @@
+/* src/components/Hero.css */
+.hero {
+  position: relative;
+  padding: 8rem 2rem 6rem;
+  background: linear-gradient(135deg, #f5f9ff, #ffffff);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Conteneur interne avec layout amélioré */
+.hero-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  gap: 3rem;
+}
+
+/* Section texte avec typographie améliorée */
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.greeting {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Conteneur pour les boutons */
+.btn-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Boutons d'appel à l'action améliorés */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.primary {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+}
+
+.btn.secondary:hover {
+  background: rgba(0, 153, 255, 0.08);
+}
+
+/* Avatar avec design modernisé */
+.hero-avatar {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.hero-avatar img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px; /* Bordure carrée avec coins arrondis pour un look plus moderne */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.avatar-decoration {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  width: 280px;
+  height: 280px;
+  border: 2px solid var(--primary-color);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.hero-avatar:hover img {
+  transform: translateY(-5px);
+}
+
+/* Formes décoratives en arrière-plan */
+.hero-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.shape-1 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  top: -60px;
+  right: -100px;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
+  bottom: 10px;
+  left: -10px;
+}
+
+/* Responsive amélioré */
+@media (max-width: 992px) {
+  .hero-inner {
+    gap: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-avatar img,
+  .avatar-decoration {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 1.5rem 5rem;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero-avatar img,
+  .avatar-decoration {
+    width: 200px;
+    height: 200px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
