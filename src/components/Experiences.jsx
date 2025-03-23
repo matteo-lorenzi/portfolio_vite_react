@@ -22,8 +22,7 @@ const Experiences = () => {
                                 <h3>Développeur web</h3>
                                 <h4>MSH-Alpes</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aliquam ad vitae dolore reprehenderit vero nihil! Incidunt alias, 
-                                    id aspernatur, possimus quam ab dolorum aliquam totam autem recusandae sunt vel.
+                                    Pas encore de description
                                 </p>
                                 <div className="experience-tags">
                                     <span>UI Design</span>
