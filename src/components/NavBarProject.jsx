@@ -36,11 +36,6 @@ const NavBarProject = () => {
                             Projets récents
                         </button>
                     </li>
-                    <li className={isActive("github") ? "active" : ""}>
-                        <button onClick={() => handleFilter("github")} className="nav-button">
-                            Projets GitHub
-                        </button>
-                    </li>
                     <li className={isActive("html") ? "active" : ""}>
                         <button onClick={() => handleFilter("html")} className="nav-button">
                             Projets HTML/CSS

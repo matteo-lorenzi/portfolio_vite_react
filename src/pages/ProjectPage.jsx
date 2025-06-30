@@ -19,7 +19,7 @@ const ProjectPage = () => {
                 "Dans un deuxième temps, nous sommes passés à la phase de développement. Nous avons réparti les tâches en fonction des rôles attribués précédemment, et nous avons commencé à développer notre jeu/application. Cette phase était également intense, car nous avons rencontré de nombreux bugs et autres problèmes techniques à résoudre. Heureusement, notre groupe était soudé et nous avons pu compter sur l'entraide et le soutien de chacun. Dans notre groupe, nous avions un 'parcours B' qui s'est occupé de la partie back du serveur, de la gestion de la sécurité et de la base de données, tandis que les autres 'parcours A' étaient plus axés sur le développement fonctionnel et visuel de l'application.",
                 "En somme, le projet Terraforma était une expérience riche et formatrice, qui nous a permis de mettre en pratique nos compétences en gestion de projet et en développement web.",
             ],
-            tags: ['#javascript', '#HTML', '#css', '#PHP', '#github'],
+            tags: ['#javascript', '#HTML', '#css', '#PHP'],
         },
         // ... autres projets (inchangés)
         2: {
@@ -31,7 +31,7 @@ const ProjectPage = () => {
                 "Le thème de la 'GameJAM' était centré autour de notre IUT, mais avec une touche fantastique. Nous avons donc dû faire travailler notre imagination pour créer une histoire captivante. Nous avons imaginé un scénario dans lequel un alien s'écrase dans notre IUT et doit résoudre des énigmes et des mini-jeux basés sur l'informatique pour réparer son vaisseau spatial.",
                 "Ce projet nous a permis de développer notre créativité et notre capacité à travailler en équipe. Nous avons appris à nous adapter aux contraintes du projet et à trouver des solutions innovantes pour répondre aux besoins du jeu.",
             ],
-            tags: ['#Python', '#github'],
+            tags: ['#Python'],
         },
         3: {
             title: 'Fish\'Event',
@@ -56,7 +56,7 @@ const ProjectPage = () => {
                 "Nous avons défini les fonctionnalités et caractéristiques du site dans un recueil des besoins. Ensuite, nous avons réalisé le wireframe du site et développé le site en utilisant HTML et CSS.",
                 "Ce projet m'a permis d'apprendre à rechercher et partager efficacement des informations, ainsi que de développer un site web de A à Z. Le travail d'équipe, la collaboration et la communication ont été essentiels pour mener ce projet à bien.",
             ],
-            tags: ['#HTML', '#css', '#github'],
+            tags: ['#HTML', '#css'],
         },
         6: {
             title: "Installation d'un poste pour le développement",
@@ -66,7 +66,7 @@ const ProjectPage = () => {
                 "Pour rendre les étapes d'installation accessibles à tous, nous avons créé des illustrations visuelles et des schémas explicatifs. Ces représentations graphiques ont été conçues de manière à rendre les concepts techniques accessibles à un public non technique.",
                 "Grâce à ce projet, j'ai acquis la capacité de synthétiser et de vulgariser des informations techniques pour les rendre accessibles à tous. Cette expérience m'a également permis de développer mes compétences en synthèse et vulgarisation d'informations techniques.",
             ],
-            tags: ['#Word', '#github'],
+            tags: ['#Word'],
         },
     };
 

@@ -15,7 +15,7 @@ const AllProjects = () => {
             id: 1,
             title: 'Terraforma',
             description: 'Création d\'un jeu vidéo ludo- éducatif pour un niveau de 3ème en SVT.',
-            tags: ['javascript', 'html', 'css', 'php', 'github'],
+            tags: ['javascript', 'html', 'css', 'php'],
             date: '2024-01-15', // Format YYYY-MM-DD pour faciliter le tri
             isRecent: true
         },
@@ -23,7 +23,7 @@ const AllProjects = () => {
             id: 2,
             title: 'GameJam',
             description: 'Création d\'un jeu en lien avec l\'IUT.',
-            tags: ['python', 'github'],
+            tags: ['python'],
             date: '2023-11-20',
             isRecent: true
         },
@@ -47,7 +47,7 @@ const AllProjects = () => {
             id: 5,
             title: 'Site web pour élèves de 3ème',
             description: 'Site web simplifiant la recherche de stage pour les élèves de 3ème.',
-            tags: ['html', 'css', 'github'],
+            tags: ['html', 'css'],
             date: '2022-12-12',
             isRecent: false
         },
@@ -55,7 +55,7 @@ const AllProjects = () => {
             id: 6,
             title: 'Installation d\'un poste pour le développement',
             description: 'Installation d\'un poste pour le développement.',
-            tags: ['word', 'github'],
+            tags: ['word'],
             date: '2022-09-25',
             isRecent: false
         },
@@ -75,9 +75,6 @@ const AllProjects = () => {
         switch (filter) {
             case 'recent':
                 filtered = projects.filter(project => project.isRecent);
-                break;
-            case 'github':
-                filtered = projects.filter(project => project.tags.includes('github'));
                 break;
             case 'html':
                 filtered = projects.filter(project =>
