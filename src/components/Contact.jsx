@@ -20,17 +20,17 @@ const Contact = () => {
       form.current,
       emailjsConfig.publicKey
     )
-    .then((result) => {
-      console.log('Email envoyé avec succès:', result.text);
-      setMessage('Message envoyé avec succès !');
-      setIsLoading(false);
-      form.current.reset(); // Réinitialise le formulaire
-    })
-    .catch((error) => {
-      console.error('Erreur lors de l\'envoi:', error.text);
-      setMessage('Erreur lors de l\'envoi du message. Veuillez réessayer.');
-      setIsLoading(false);
-    });
+      .then((result) => {
+        console.log('Email envoyé avec succès:', result.text);
+        setMessage('Message envoyé avec succès !');
+        setIsLoading(false);
+        form.current.reset(); // Réinitialise le formulaire
+      })
+      .catch((error) => {
+        console.error('Erreur lors de l\'envoi:', error.text);
+        setMessage('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+        setIsLoading(false);
+      });
   };
 
   return (

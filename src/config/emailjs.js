@@ -3,9 +3,9 @@
 // Remplacez ces valeurs par vos propres clés obtenues sur https://www.emailjs.com/
 
 export const emailjsConfig = {
-  serviceId: 'service_vuzecyq', // Remplacez par votre Service ID
-  templateId: 'template_kyal3vk', // Remplacez par votre Template ID
-  publicKey: 'PoGnrCUYga5WfPeOc' // Remplacez par votre Public Key
+  serviceId: "service_vuzecyq", // Remplacez par votre Service ID
+  templateId: "template_kyal3vk", // Remplacez par votre Template ID
+  publicKey: "PoGnrCUYga5WfPeOc", // Remplacez par votre Public Key
 };
 
 // Instructions pour configurer EmailJS :
