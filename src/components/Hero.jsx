@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="hero-inner">
         <div className="hero-text">
           <span className="greeting">Bonjour, je suis</span>
-          <h1>Matteo</h1>
+          <h1>Matteo Lorenzi</h1>
           <p>
             Étudiant en 3ème année d'informatique, passionné par le design et l'innovation.
           </p>
