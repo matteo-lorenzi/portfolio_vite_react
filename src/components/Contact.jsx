@@ -63,7 +63,7 @@ const Contact = () => {
         <h3>Retrouvez-moi aussi sur :</h3>
         <div className="social-links">
           <a
-            href="https://github.com/votre-username"
+            href="https://github.com/matteo-lorenzi"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link github"
@@ -74,7 +74,7 @@ const Contact = () => {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/votre-profil"
+            href="https://www.linkedin.com/in/matteo-lorenzi-iut2/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link linkedin"
