@@ -11,7 +11,7 @@ const About = () => {
           <span className="section-subtitle">Découvrez</span>
           <h2>À propos de moi</h2>
           <p>
-            Je suis Matteo, étudiant en informatique passionné par le développement web et le design moderne.
+            Je suis Matteo Lorenzi, étudiant en informatique passionné par le développement web et le design moderne.
             J'aime créer des expériences utilisateur innovantes et esthétiques qui combinent fonctionnalité et élégance visuelle.
           </p>
           <div className="skills">
