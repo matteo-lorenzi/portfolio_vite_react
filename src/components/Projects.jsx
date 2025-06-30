@@ -8,7 +8,9 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="projects-header">
         <span className="section-subtitle">Portfolio</span>
-        <h2>Mes Projets</h2>
+        <h2>
+          Mes Projets <span style={{ color: '#e0115f' }}>préférer</span>
+        </h2>
       </div>
 
       <div className="projects-inner">
