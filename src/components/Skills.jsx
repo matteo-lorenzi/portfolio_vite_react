@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./Skills.css";
 import { htmlLogo, cssLogo, jsLogo, phpLogo, javaLogo, sqlLogo, figmaLogo, gitLogo } from "../js/skillLogos";
 
@@ -14,48 +14,6 @@ const skillsData = [
 ];
 
 const Skills = () => {
-    const containerRef = useRef(null);
-    const animationFrameId = useRef(null);
-    const isPaused = useRef(false);
-    const speed = 0.5; // Vitesse de défilement (pixels par frame)
-
-    useEffect(() => {
-        const container = containerRef.current;
-        let scrollAmount = container.scrollLeft;
-
-        const animate = () => {
-            if (!isPaused.current) {
-                scrollAmount += speed;
-                // Lorsque le scroll atteint la moitié du scrollWidth, on soustrait cette valeur
-                if (scrollAmount >= container.scrollWidth / 2) {
-                    scrollAmount -= container.scrollWidth / 2;
-                }
-                container.scrollLeft = scrollAmount;
-            }
-            animationFrameId.current = requestAnimationFrame(animate);
-        };
-
-        // Démarrer l'animation
-        animationFrameId.current = requestAnimationFrame(animate);
-
-        const handleMouseEnter = () => {
-            isPaused.current = true;
-        };
-
-        const handleMouseLeave = () => {
-            isPaused.current = false;
-        };
-
-        container.addEventListener("mouseenter", handleMouseEnter);
-        container.addEventListener("mouseleave", handleMouseLeave);
-
-        return () => {
-            cancelAnimationFrame(animationFrameId.current);
-            container.removeEventListener("mouseenter", handleMouseEnter);
-            container.removeEventListener("mouseleave", handleMouseLeave);
-        };
-    }, []);
-
     return (
         <section id="skills" className="skills">
             <div className="skills-header">
@@ -63,19 +21,16 @@ const Skills = () => {
                 <h2>Compétences</h2>
             </div>
 
-            <div className="skills-carousel-container">
-                <div className="skills-container" ref={containerRef}>
-                    {/* Duplication de la liste pour créer un effet de boucle infinie */}
-                    {[...skillsData, ...skillsData].map((skill, index) => (
-                        <div className="skill" key={`${skill.name}-${index}`}>
-                            <div className="skill-icon">
-                                <img src={skill.logo} alt={`Logo ${skill.name}`} className="skill-logo" />
-                            </div>
-                            <h3>{skill.name}</h3>
-                            <p>{skill.description}</p>
+            <div className="skills-grid-container">
+                {skillsData.map((skill, index) => (
+                    <div className="skill-card" key={`${skill.name}-${index}`}>
+                        <div className="skill-icon">
+                            <img src={skill.logo} alt={`Logo ${skill.name}`} className="skill-logo" />
                         </div>
-                    ))}
-                </div>
+                        <h3>{skill.name}</h3>
+                        <p>{skill.description}</p>
+                    </div>
+                ))}
             </div>
 
             <div className="skills-shapes">
