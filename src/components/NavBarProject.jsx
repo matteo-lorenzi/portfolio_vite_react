@@ -1,33 +1,36 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { projectsData } from "../data/projectsData";
 import "./NavBarProject.css";
 
 const NavBarProject = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const currentPath = location.pathname;
 
-    // Filtrer par catégorie
     const handleFilter = (filter) => {
-        // Utiliser des query params pour conserver l'état du filtre
         navigate(`/all-projects${filter ? `?filter=${filter}` : ''}`);
     };
 
-    // Déterminer si un filtre est actif
     const isActive = (filter) => {
-        if (!filter && !location.search) return true;
-        return location.search === `?filter=${filter}`;
+        const searchParams = new URLSearchParams(location.search);
+        const currentFilter = searchParams.get('filter');
+        if (!filter && !currentFilter) return true;
+        return currentFilter === filter;
     };
+
+    // Extraire les technologies uniques de tous les projets
+    const allTechnologies = projectsData.flatMap(p => p.technologies);
+    const uniqueTechnologies = [...new Set(allTechnologies)];
 
     return (
         <aside className="sidebar">
             <div className="sidebar-header">
-                <h2>Navigation</h2>
+                <h2>Filtres</h2>
             </div>
             <nav className="sidebar-nav">
                 <ul>
-                    <li className={isActive() ? "active" : ""}>
-                        <button onClick={() => handleFilter()} className="nav-button">
+                    <li className={isActive(null) ? "active" : ""}>
+                        <button onClick={() => handleFilter(null)} className="nav-button">
                             Tous les projets
                         </button>
                     </li>
@@ -36,21 +39,13 @@ const NavBarProject = () => {
                             Projets récents
                         </button>
                     </li>
-                    <li className={isActive("html") ? "active" : ""}>
-                        <button onClick={() => handleFilter("html")} className="nav-button">
-                            Projets HTML/CSS
-                        </button>
-                    </li>
-                    <li className={isActive("java") ? "active" : ""}>
-                        <button onClick={() => handleFilter("java")} className="nav-button">
-                            Projets Java
-                        </button>
-                    </li>
-                    <li className={isActive("python") ? "active" : ""}>
-                        <button onClick={() => handleFilter("python")} className="nav-button">
-                            Projets Python
-                        </button>
-                    </li>
+                    {uniqueTechnologies.map(tech => (
+                        <li key={tech} className={isActive(tech.toLowerCase()) ? "active" : ""}>
+                            <button onClick={() => handleFilter(tech.toLowerCase())} className="nav-button">
+                                Projets {tech}
+                            </button>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </aside>
